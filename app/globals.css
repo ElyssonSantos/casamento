@@ -1,0 +1,322 @@
+:root {
+  --color-primary: #5E7D63;
+  /* Verde Médio mais suave */
+  --color-primary-dark: #2D4739;
+  --color-secondary: #5E7D63;
+  --color-gold: #C5A059;
+  --color-gold-light: #D4B675;
+  --bg-color: #FDFBF7;
+  /* Off-white linho */
+  --text-main: #2D4739;
+  --white: #FFFFFF;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Premium Card Style */
+.premium-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 10px 40px -10px rgba(94, 125, 99, 0.1),
+    0 0 0 1px rgba(197, 160, 89, 0.1) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.5;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--color-gold), #B08D55);
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 50px;
+  font-family: var(--font-bree), serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  background: white;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: var(--color-primary);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: var(--color-gold);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(45, 71, 57, 0.05);
+}
+
+
+/* Dove Animation System */
+.doves-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  /* Behind content */
+  overflow: hidden;
+}
+
+.dove {
+  position: absolute;
+  /* Turn black image to white using filters */
+  filter: brightness(0) invert(1);
+  opacity: 0.3;
+  /* Adjusted opacity for white dove */
+}
+
+/* Animations */
+@keyframes fly-1 {
+  0% {
+    transform: translate(-10vw, 80vh) scale(0.6) rotate(15deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(110vw, 20vh) scale(0.8) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-2 {
+  0% {
+    transform: translate(-10vw, 40vh) scale(0.4) rotate(10deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.15;
+  }
+
+  80% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: translate(110vw, 60vh) scale(0.5) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-3 {
+  0% {
+    transform: translate(110vw, 90vh) scale(0.7) rotate(-10deg) scaleX(-1);
+    opacity: 0;
+  }
+
+  /* scaleX(-1) to flip direction */
+  20% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(-10vw, 50vh) scale(0.9) rotate(5deg) scaleX(-1);
+    opacity: 0;
+  }
+}
+
+
+@keyframes fly-4 {
+  0% {
+    transform: translate(-10vw, 20vh) scale(0.5) rotate(20deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.18;
+  }
+
+  80% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform: translate(110vw, 80vh) scale(0.6) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-5 {
+  0% {
+    transform: translate(110vw, 30vh) scale(0.65) rotate(-15deg) scaleX(-1);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.22;
+  }
+
+  80% {
+    opacity: 0.22;
+  }
+
+  100% {
+    transform: translate(-10vw, 10vh) scale(0.8) rotate(0deg) scaleX(-1);
+    opacity: 0;
+  }
+}
+
+/* Dove configurations */
+.dove-1 {
+  width: 80px;
+  height: 80px;
+  animation: fly-1 25s linear infinite;
+  animation-delay: 0s;
+}
+
+.dove-2 {
+  width: 50px;
+  height: 50px;
+  animation: fly-2 35s linear infinite;
+  animation-delay: 5s;
+}
+
+.dove-3 {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  animation: fly-3 30s linear infinite;
+  animation-delay: 10s;
+}
+
+.dove-4 {
+  width: 45px;
+  height: 45px;
+  animation: fly-4 28s linear infinite;
+  animation-delay: 2s;
+  /* Offset start */
+}
+
+.dove-5 {
+  width: 65px;
+  height: 65px;
+  animation: fly-5 32s linear infinite;
+  animation-delay: 15s;
+}
+
+/* Mobile adjustments using media query */
+@media (max-width: 600px) {
+  .dove-1 {
+    width: 60px;
+    height: 60px;
+    animation-duration: 20s;
+  }
+
+  .dove-2 {
+    width: 40px;
+    height: 40px;
+    animation-duration: 30s;
+  }
+
+  .dove-3,
+  .dove-4,
+  .dove-5 {
+    display: none;
+  }
+
+  /* Hide extra doves on mobile for performance/cleaning */
+}
