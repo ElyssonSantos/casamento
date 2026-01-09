@@ -109,7 +109,7 @@ export default function Inicio() {
                 <h2 style={{ fontFamily: 'var(--font-vibes)', color: 'var(--color-primary-dark)', fontSize: '2.8rem', marginBottom: '15px' }} NÃO SEI O LUGAR</h2>
 
                 <p style={{ fontFamily: 'var(--font-bree)', color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '25px' }}>
-                    bla bla bla - n°3 <br />algum ligar - SE
+                    bla bla bla - <br />algum ligar - SE
                 </p>
 
                 <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '10px', color: 'var(--color-primary)', fontFamily: 'var(--font-bree)', background: '#F5F7F5', padding: '10px 25px', borderRadius: '12px' }}>
