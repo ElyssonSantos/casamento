@@ -87,7 +87,7 @@ export default function Inicio() {
                     {/* Subtitle Date */}
                     <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
                         <span style={{ height: '1px', width: '40px', background: 'var(--color-gold)', opacity: 0.5 }}></span>
-                        <span style={{ fontFamily: 'var(--font-bree)', color: 'var(--color-primary-dark)', fontSize: '1.1rem', letterSpacing: '2px' }}>15 . 10 . 2026</span>
+                        <span style={{ fontFamily: 'var(--font-bree)', color: 'var(--color-primary-dark)', fontSize: '1.1rem', letterSpacing: '2px' }}>17 . 10 . 2026</span>
                         <span style={{ height: '1px', width: '40px', background: 'var(--color-gold)', opacity: 0.5 }}></span>
                     </div>
                 </motion.div>
@@ -106,10 +106,10 @@ export default function Inicio() {
                     <span style={{ display: 'inline-block', padding: '6px 12px', borderRadius: '20px', background: 'rgba(197, 160, 89, 0.1)', color: 'var(--color-gold)', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>Cerimônia</span>
                 </div>
 
-                <h2 style={{ fontFamily: 'var(--font-vibes)', color: 'var(--color-primary-dark)', fontSize: '2.8rem', marginBottom: '15px' }}>Villa Giardini</h2>
+                <h2 style={{ fontFamily: 'var(--font-vibes)', color: 'var(--color-primary-dark)', fontSize: '2.8rem', marginBottom: '15px' }} NÃO SEI O LUGAR</h2>
 
                 <p style={{ fontFamily: 'var(--font-bree)', color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '25px' }}>
-                    SMPW Quadra 6 - Park Way<br />Brasília - DF
+                    bla bla bla - n°3 <br />algum ligar - SE
                 </p>
 
                 <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '10px', color: 'var(--color-primary)', fontFamily: 'var(--font-bree)', background: '#F5F7F5', padding: '10px 25px', borderRadius: '12px' }}>
