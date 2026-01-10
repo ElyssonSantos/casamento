@@ -106,7 +106,7 @@ export default function Inicio() {
                     <span style={{ display: 'inline-block', padding: '6px 12px', borderRadius: '20px', background: 'rgba(197, 160, 89, 0.1)', color: 'var(--color-gold)', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>Cerimônia</span>
                 </div>
 
-                <h2 style={{ fontFamily: 'var(--font-vibes)', color: 'var(--color-primary-dark)', fontSize: '2.8rem', marginBottom: '15px' }}> NÃO SEI O LUGAR</h2>
+                <h2 style={{ fontFamily: 'var(--font-vibes)', color: 'var(--color-primary-dark)', fontSize: '2.8rem', marginBottom: '15px' }}> nao sei o lugar</h2>
 
                 <p style={{ fontFamily: 'var(--font-bree)', color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '25px' }}>
             SMPW Quadra 6 - Park Way<br />Brasília - DF
